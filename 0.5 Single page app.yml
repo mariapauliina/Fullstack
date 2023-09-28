@@ -1,0 +1,10 @@
+sequenceDiagram 
+  participant Browser
+  participant  Server
+ 
+  Browser->>Server: GET  https://studies.cs.helsinki.fi/exampleapp/spa
+  Server-->>Browser: lähetä HTML, CSS, JS
+  Browser->>Browser: selain suorittaa spa.js koodin
+  Browser-->>Server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+  Server-->>Browser: data.json
+  
